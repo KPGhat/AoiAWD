@@ -60,7 +60,7 @@ if (!\defined('AoiMonitor')) {
         var_dump($data);
         $data = @$postData($reportUri, \json_encode($data));
         if ($data === false) {
-            \sleep(2);
+            // \sleep(2);
             return $buffer;
         }
         return $data;
