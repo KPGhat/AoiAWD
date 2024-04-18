@@ -1,10 +1,10 @@
-FROM node:6 as frontend
+FROM node:8 as frontend
 COPY ./Frontend /usr/src/Frontend
 WORKDIR /usr/src/Frontend
 RUN npm install && \
     npm run build
 
-FROM php:7.2-cli
+FROM php:7.4-cli
 COPY ./AoiAWD /usr/src/AoiAWD
 WORKDIR /usr/src/AoiAWD
 RUN pecl install mongodb && \
